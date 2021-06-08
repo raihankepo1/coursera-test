@@ -1,394 +1,133 @@
-@import 'config';
-@import 'utilities';
-@import 'item_grid';
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utilities.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>43A87006190240</title>
+  </head>
+  <body>
+    <header class="hero">
+      <div id="navbar" class="navbar">
+        <h1 class="logo">
+          <span class="text-primary"><i class="fa fa-book"></i>Edge</span>Ledger
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#cases">Cases</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+        <h1>43A87006190240</h1>
+        <p>We Provide world class financial assistance</p>
+        <a href="#about" class="btn"
+          ><i class="fa fa-chevron-right"></i> Read More</a
+        >
+      </div>
+    </header>
 
-// General Styles
-* {
-  margin: 0;
-  padding: 0;
-}
+    <main>
+      <section id="about" class="icons bg-light">
+        <div class="flex-items">
+          <div>
+            <i class="fa fa-university fa-2x"></i>
+            <div>
+              <h3>Investment Banking</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+                dolor.
+              </p>
+            </div>
+          </div>
+          <div>
+            <i class="fa fa-book fa-2x"></i>
+            <div>
+              <h3>Portofolio Manager</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+                dolor.
+              </p>
+            </div>
+          </div>
+          <div>
+            <i class="fa fa-pencil fa-2x"> </i>
+            <div>
+              <h3>Tax & Cusotidal</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+                dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-body {
-  font-family: 'Dosis', sans-serif;
-  line-height: 1.6;
-  background: #fff;
-}
+      <!-- About: Solutions -->
+      <section class="solutions flex-columns">
+        <div class="row">
+          <div class="column">
+            <div class="column-1">
+              <img src="img/home/people.jpg" alt="" />
+            </div>
+          </div>
+          <div class="column">
+            <div class="column-2 btn-primary">
+              <h4>What you are looking for</h4>
+              <h2>We provide bespoke solutions</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim
+                temporibus dicta explicabo consequatur soluta? Corporis nesciunt
+                doloremque reiciendis hic ab alias maiores tenetur voluptatum
+                ea?
+              </p>
+              <a href="#" class="btn btn-outline"
+                ><i class="fa fa-chevron">Read More</i></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
-a {
-  text-decoration: none;
-  color: $dark-color;
-}
-
-ul {
-  list-style: none;
-}
-
-h2,
-h3,
-h4 {
-  text-transform: uppercase;
-}
-
-img {
-  width: 100%;
-}
-
-// Logo
-#logo {
-  width: 70px;
-  height: 70px;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-// Main Nav
-#main-nav {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1rem;
-
-  ul {
-    display: flex;
-  }
-
-  li {
-    padding: 1rem 1.5rem;
-  }
-
-  a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    border-bottom: 3px transparent solid;
-    padding-bottom: 0.5rem;
-    transition: border-color 0.5s;
-
-    &:hover {
-      border-color: $medium-color;
-    }
-
-    &.current {
-      border-color: $main-color;
-    }
-  }
-}
-
-// Header
-#header {
-  // Header Home
-  &-home {
-    background: $bg-image no-repeat center right / cover;
-    height: 100vh;
-    color: #fff;
-
-    // Header Content
-    .header-content {
-      text-align: center;
-      padding-top: 20%;
-
-      h1 {
-        font-size: 4rem;
-        line-height: 1.2;
-      }
-    }
-  }
-
-  // Header Inner
-  &-inner {
-    background: $bg-image no-repeat 20% 30% / cover;
-    height: 5.5rem;
-    border-bottom: 3px solid $main-color;
-  }
-}
-
-// Home Sections
-#home {
-  // Home Section A
-  &-a {
-    .specials {
-      margin-top: 3rem;
-      display: grid;
-      grid-gap: 1rem;
-      grid-template-columns: repeat(4, 1fr);
-
-      .fas {
-        color: $main-color;
-        padding-bottom: 0.4rem;
-      }
-    }
-  }
-
-  // Home Section B
-  &-b {
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-
-      li {
-        line-height: 2;
-
-        &.stats-title {
-          font-size: 1.5rem;
-        }
-
-        &.stats-number {
-          font-size: 2rem;
-          font-weight: bold;
-        }
-      }
-
-      div {
-        padding: 3rem 0;
-
-        &:nth-child(odd) {
-          background: $light-color;
-        }
-
-        &:nth-child(even) {
-          background: $medium-color;
-        }
-      }
-    }
-  }
-
-  // Home Section C
-  &-c {
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1.5rem;
-      text-align: center;
-
-      // process-step
-      &-step {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 28px;
-        background: $main-color;
-        color: set-text-color($main-color);
-        border-radius: 50%;
-        height: 15px;
-        width: 15px;
-        line-height: 15px;
-        padding: 1rem;
-        transition: all 1s;
-      }
-
-      // process-icon
-      &-icon {
-        border-radius: 50%;
-        background: $dark-color;
-        color: set-text-color($dark-color);
-        padding: 2rem;
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
-        text-align: center;
-        position: relative;
-        transition: all 1s;
-
-        &:hover {
-          background: $main-color;
-          width: 90px;
-          height: 90px;
-          line-height: 90px;
-
-          .process-step {
-            background: $dark-color;
-            color: set-text-color($dark-color);
-          }
-        }
-      }
-    }
-  }
-}
-
-// About Sections
-#about {
-  // About A
-  &-a {
-    .about-info {
-      display: grid;
-      grid-template-areas:
-        'bioimage bio bio'
-        'aw1 aw2 aw3';
-      grid-gap: 1.2rem;
-    }
-
-    // Grid Area
-    .bio-image {
-      grid-area: bioimage;
-    }
-
-    .bio {
-      grid-area: bio;
-      border-left: 3px solid $main-color;
-      padding: 0.8rem;
-    }
-
-    .award-1 {
-      grid-area: aw1;
-    }
-
-    .award-2 {
-      grid-area: aw2;
-    }
-
-    .award-3 {
-      grid-area: aw3;
-    }
-
-    .award-1 .fas,
-    .award-2 .fas,
-    .award-3 .fas {
-      color: $main-color;
-      margin: 1rem;
-    }
-  }
-  // About B
-  &-b {
-    .progress {
-      overflow: hidden;
-      height: 20px;
-      background: $medium-color;
-      border-radius: 5px;
-      margin-bottom: 0.6rem;
-
-      div {
-        height: 100%;
-        color: #fff;
-        text-align: center;
-        background: $main-color;
-      }
-    }
-  }
-  // About C
-  &-c {
-    .about-logos {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 2rem;
-
-      img {
-        width: 70%;
-      }
-    }
-  }
-  // About D
-  &-d {
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 0.5rem;
-
-      ul {
-        list-style: none;
-        margin-top: 1rem;
-        display: flex;
-        align-items: center;
-      }
-
-      p {
-        border: 1px solid $medium-color;
-        border-radius: 5px;
-        padding: 0.5rem;
-      }
-
-      img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 0.5rem;
-      }
-    }
-  }
-}
-
-// Contact Page
-#contact {
-  &-a {
-    .text-fields {
-      display: grid;
-      grid-template-areas:
-        'name email'
-        'subject phone'
-        'message message';
-      grid-gap: 1.2rem;
-      margin-bottom: 1.2rem;
-
-      // Grid Areas
-      .name-input {
-        grid-area: name;
-      }
-      .subject-input {
-        grid-area: subject;
-      }
-      .email-input {
-        grid-area: email;
-      }
-      .phone-input {
-        grid-area: phone;
-      }
-      .message-input {
-        grid-area: message;
-        height: 100px;
-      }
-
-      .text-input {
-        padding: 0.5rem 1rem;
-      }
-    }
-
-    button[type='submit'] {
-      width: 50%;
-    }
-  }
-
-  &-b {
-    .contact-info {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      text-align: center;
-    }
-  }
-
-  &-c {
-    h1 {
-      text-align: center;
-      font-size: 4rem;
-    }
-  }
-}
-
-// Footer
-#main-footer {
-  background: $dark-color;
-  color: #fff;
-  height: 5rem;
-
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    height: 5rem;
-    align-items: center;
-
-    .social .fab {
-      margin-right: 1rem;
-      border: 2px #fff solid;
-      border-radius: 50%;
-      height: 20px;
-      width: 20px;
-      line-height: 20px;
-      text-align: center;
-      padding: 0.5rem;
-
-      &:hover {
-        background: $main-color;
-      }
-    }
-  }
-}
-
-// Import Media Queries
-@import 'media';
+      <!-- Cases -->
+      <section id="cases" class="cases flex-grid section-padding">
+        <header class="section-header">
+          <h4>This is what we do</h4>
+          <h2>Business Cases</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam,
+            impedit.
+          </p>
+        </header>
+        <div class="row">
+          <div class="column">
+            <img src="/EdgeLedger/img/cases/cases1.jpg" alt="" />
+            <img src="/EdgeLedger/img/cases/cases2.jpg" alt="" />
+          </div>
+          <div class="column">
+            <img src="/EdgeLedger/img/cases/cases3.jpg" alt="" />
+            <img src="/EdgeLedger/img/cases/cases4.jpg" alt="" />
+          </div>
+          <div class="column">
+            <img src="/EdgeLedger/img/cases/cases5.jpg" alt="" />
+            <img src="/EdgeLedger/img/cases/cases6.jpg" alt="" />
+          </div>
+          <div class="column">
+            <img src="/EdgeLedger/img/cases/cases7.jpg" alt="" />
+            <img src="/EdgeLedger/img/cases/cases8.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
